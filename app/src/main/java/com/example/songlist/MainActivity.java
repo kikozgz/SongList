@@ -18,20 +18,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Aplicacion app =(Aplicacion) getApplication();
-        recyclerView=(RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setAdapter(app.getAdaptador());
-        layoutmanager=new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutmanager);
-
-        app.getAdaptador().setOnItemClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Seleccionado elemento: "
-                        +recyclerView.getChildAdapterPosition(view), Toast.LENGTH_SHORT).show();
-            }
-        });
-
     }
 }
