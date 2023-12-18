@@ -40,9 +40,10 @@ public class SelectorFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(actividad, "Seleccionado el elemento: "
+                /*Toast.makeText(actividad, "Seleccionado el elemento: "
                                 + recyclerView.getChildAdapterPosition(v),
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT).show();*/
+                ((MainActivity) actividad).mostrarDetalle( recyclerView.getChildAdapterPosition(v));
             }
         });
         return vista;
